@@ -4,7 +4,7 @@
 
 ---
 
-## 1. Digital Backbone: Motor de Orquestación
+## 1. Digital Backbone (Sistema Nervioso Central): Motor de Orquestación
 
 ### 1.1 El Problema Real
 
@@ -220,7 +220,7 @@ Cada eslabón de esta cadena es inmutable y auditable. Si un dato llega al repor
 
 ---
 
-## 3. FinOps desde el Día 0
+## 3. FinOps (Financial Operations) desde el Día 0
 
 ### 3.1 El Problema de Costos en Proyectos de Esta Escala
 
@@ -230,20 +230,18 @@ Un proyecto de 5-6 años con 20+ unidades productivas puede generar costos de in
 
 ```mermaid
 graph TD
-    subgraph "Principio: Compute donde tiene sentido"
-        EDGE[🏭 Edge Computing<br/>En cada zona productiva<br/>Procesamiento local<br/>Funciona sin internet]
-        CENTRAL[🖥️ Edge Central<br/>On-premise en Aldea Maya<br/>Orquestación, dashboards<br/>Bus de eventos]
-        NUBE[☁️ Nube Soberana<br/>Región México<br/>Solo lo que requiere<br/>escala elástica]
+    subgraph "Principio: Cloud-First, Managed-First"
+        CAMPO[📱 Dispositivos de Campo<br/>Tablets / apps móviles<br/>Cache local para sync]
+        CLOUD[☁️ Cloud Managed<br/>AWS / GCP<br/>Serverless + managed services<br/>Paga solo lo que usas]
     end
 
-    EDGE -->|Datos agregados| CENTRAL
-    CENTRAL -->|Respaldos + ML| NUBE
+    CAMPO -->|Datos vía API| CLOUD
 
-    subgraph "Reglas FinOps"
+    subgraph "Reglas FinOps (Financial Operations)"
         R1[📏 Costo por hectárea<br/>instrumentada: decreciente]
-        R2[📏 Costo de nube < 15%<br/>del costo total de TI]
-        R3[📏 ROI de cada sensor<br/>justificado por caso de uso]
-        R4[📏 Revisión mensual<br/>de consumo cloud]
+        R2[📏 Serverless = costo<br/>proporcional al uso real]
+        R3[📏 ROI de cada servicio<br/>justificado por caso de uso]
+        R4[📏 Alertas automáticas<br/>de presupuesto mensual]
     end
 ```
 
@@ -251,15 +249,15 @@ graph TD
 
 | Capa | Tipo de Costo | Estrategia |
 |------|---------------|------------|
-| **Edge Zonal** | CapEx (hardware) + OpEx mínimo | Dispositivos robustos, bajo consumo, larga vida útil |
-| **Edge Central** | CapEx (servidor on-premise) | Amortizable, sin costos recurrentes de nube |
-| **Nube Soberana** | OpEx (pay-as-you-go) | Solo para ML, respaldos y picos de demanda |
-| **Conectividad** | OpEx | Red mesh entre zonas, satelital como respaldo |
-| **Asistentes Virtuales** | OpEx (modelos de IA) | Modelos edge-first, nube solo para entrenamiento |
+| **Dispositivos de campo** | CapEx (tablets/dispositivos) | Robustos, bajo costo, cache local para tolerancia a desconexión |
+| **Cloud managed** | OpEx (pay-as-you-go) | Serverless: Lambda, Step Functions, EventBridge — paga solo lo que usas |
+| **Base de datos** | OpEx (managed) | RDS PostgreSQL / Cloud SQL — sin DBA, backups automáticos |
+| **Analítica** | OpEx (por consulta) | Athena / BigQuery — sin infraestructura, costo por query |
+| **Conectividad** | OpEx | Internet del territorio + APIs cloud |
 
-### 3.4 Transparencia de Costos para el Fondo
+### 3.4 Transparencia de Costos
 
-El dashboard del fondo incluye una sección de FinOps que muestra:
+El dashboard incluye una sección de FinOps que muestra:
 
 - Costo total de TI por mes
 - Costo por unidad productiva instrumentada
@@ -310,5 +308,10 @@ sequenceDiagram
 
 ---
 
-*Documento vivo. Versión 0.1 — Sprint 0, Abril 2026*
-*BeInCloud — Arquitectos de Sistemas Nerviosos Territoriales*
+→ Anterior: [01 — Sincronía Biológica](./01-business-alignment.md)
+→ Siguiente: [03 — SDD + IA](./03-sdd-methodology.md)
+
+---
+
+*Documento vivo. Versión 0.2 — Sprint 0, Abril 2026*
+*Be In Cloud Group LLC — Ingeniería Cloud con Visión Financiera*

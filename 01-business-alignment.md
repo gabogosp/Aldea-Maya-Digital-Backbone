@@ -199,7 +199,7 @@ Los aldeanos no son usuarios de software. Son operadores de campo que necesitan 
 
 ## 4. Gobernanza y Transparencia
 
-### 4.1 Trazabilidad para el Fondo
+### 4.1 Trazabilidad y Auditoría
 
 Cada dato capturado en campo tiene una línea directa hasta el reporte de auditoría:
 
@@ -208,15 +208,20 @@ Aldeano registra dato → Asistente Virtual valida → Sistema de Unidad Product
     → Bus de Orquestación → Agregación Financiera → Dashboard del Fondo
 ```
 
-### 4.2 SDD (Spec-Driven Development)
+### 4.2 SDD (Spec-Driven Development) — Especificación antes que Código
 
 Cada flujo de sincronía biológica está documentado como especificación antes de ser código. Esto significa que:
 
-- El fondo puede auditar la lógica de negocio sin leer código
+- La lógica de negocio es auditable sin necesidad de leer código
 - Cualquier despacho de TI puede implementar a partir de la especificación
 - Aldea Maya es dueña del conocimiento, no del proveedor
 
 ---
 
+→ Siguiente: [02 — Arquitectura de Datos y Transparencia](./02-architecture-ecosystem.md)
+→ Ver el Blueprint MSN donde esta sincronía se materializa: [`04-blueprint-msn.md`](./04-blueprint-msn.md)
+
+---
+
 *Documento vivo. Versión 0.1 — Sprint 0, Abril 2026*
-*BeInCloud — Arquitectos de Sistemas Nerviosos Territoriales*
+*Be In Cloud Group LLC — Ingeniería Cloud con Visión Financiera*

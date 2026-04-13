@@ -82,13 +82,13 @@ Aldea-Maya-Digital-Backbone/
 
 ---
 
-## Para el Fondo de Inversión
+## Transparencia y Auditoría
 
-Si estás leyendo esto desde el fondo, la pregunta no es *"¿cuánto cuesta el software?"*
+La pregunta clave no es *"¿cuánto cuesta el software?"*
 
-La pregunta es: **¿Cómo garantizas que cada dólar invertido en 1,800 hectáreas sea trazable, auditable y genere retorno compuesto?**
+La pregunta es: **¿Cómo se garantiza que cada dólar invertido en 1,800 hectáreas sea trazable, auditable y genere retorno compuesto?**
 
-La respuesta es el Digital Backbone.
+La respuesta es el Digital Backbone (sistema nervioso central de orquestación territorial).
 
 → Empieza por [`01-business-alignment.md`](./01-business-alignment.md) para ver que entendemos el campo.
 → Sigue con [`04-blueprint-msn.md`](./04-blueprint-msn.md) para ver el primer entregable concreto.
@@ -96,5 +96,37 @@ La respuesta es el Digital Backbone.
 
 ---
 
-**BeInCloud** — Arquitectos de Sistemas Nerviosos Territoriales
+## Cómo Leer Este Repositorio
+
+| Si quieres entender... | Lee esto | Tiempo |
+|------------------------|----------|:------:|
+| Que entendemos el campo y los ciclos biológicos | [`01-business-alignment.md`](./01-business-alignment.md) | 10 min |
+| Cómo se estructura la arquitectura de datos | [`02-architecture-ecosystem.md`](./02-architecture-ecosystem.md) | 12 min |
+| Por qué el software es un activo financiero (SDD + IA) | [`03-sdd-methodology.md`](./03-sdd-methodology.md) | 10 min |
+| El primer entregable concreto: Blueprint MSN | [`04-blueprint-msn.md`](./04-blueprint-msn.md) | 15 min |
+| La propuesta de trabajo y modelo de socio | [`05-roadmap-economics.md`](./05-roadmap-economics.md) | 10 min |
+| Quién es BeInCloud y qué hace | [`assets/beincloud-profile.md`](./assets/beincloud-profile.md) | 5 min |
+| Resumen de la presentación ejecutiva (Feb 2026) | [`assets/presentation-summary.md`](./assets/presentation-summary.md) | 5 min |
+
+---
+
+## Glosario de Siglas
+
+| Sigla | Significado |
+|-------|-------------|
+| **MSN** | Mosca Soldado Negro (*Hermetia illucens*) — unidad de transformación de residuos orgánicos en proteína y fertilizante |
+| **SDD** | Spec-Driven Development — metodología donde la especificación se escribe antes que el código y es el activo principal |
+| **Backbone** | Digital Backbone — la capa de orquestación central que sincroniza todas las unidades productivas del territorio |
+| **FinOps** | Financial Operations — disciplina de control y optimización de costos de infraestructura cloud |
+| **SLA** | Service Level Agreement — acuerdo de nivel de servicio que define tiempos de respuesta y disponibilidad |
+| **Edge AI** | Inteligencia Artificial ejecutada en dispositivos locales (en campo), sin depender de conexión a internet |
+| **NDA** | Non-Disclosure Agreement — acuerdo de confidencialidad |
+| **API** | Application Programming Interface — contrato técnico que define cómo se comunican dos sistemas |
+| **NPK** | Nitrógeno, Fósforo, Potasio — los tres macronutrientes principales del fertilizante |
+| **MRV** | Medición, Reporte y Verificación — proceso para certificar créditos de carbono |
+| **CTD** | Consejo Territorial Digital — órgano de gobernanza del backbone |
+
+---
+
+**Be In Cloud Group LLC** — Ingeniería Cloud con Visión Financiera
 *Sprint 0 — Abril 2026*

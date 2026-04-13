@@ -223,7 +223,7 @@ La combinación de especificaciones SDD + flujos de orquestación + estructura d
 - Es auditable por cualquier fondo de inversión
 - Es transferible sin dependencia de ningún proveedor
 
-> **Para el fondo**: El backbone no es un gasto de TI. Es un **activo de propiedad intelectual** que se aprecia con cada unidad productiva que se integra y con cada réplica que se licencia.
+> El backbone no es un gasto de TI. Es un **activo de propiedad intelectual** que se aprecia con cada unidad productiva que se integra y con cada réplica que se licencia.
 
 ---
 
@@ -285,9 +285,9 @@ El fondo tiene acceso a un dashboard que muestra:
 | Costo real vs. precotización | Mensual | Control financiero |
 | Despachos activos y su cumplimiento | Mensual | Gestión de proveedores |
 
-### 5.2 Garantía para el Fondo
+### 5.2 Garantías del Modelo SDD
 
-SDD garantiza al fondo que:
+SDD garantiza que:
 
 - **El conocimiento no se pierde**: Está en las specs, no en las personas
 - **El dinero es trazable**: Cada peso invertido en TI tiene una spec que lo justifica
@@ -297,5 +297,10 @@ SDD garantiza al fondo que:
 
 ---
 
-*Documento vivo. Versión 0.1 — Sprint 0, Abril 2026*
-*BeInCloud — Arquitectos de Sistemas Nerviosos Territoriales*
+→ Anterior: [02 — Arquitectura de Datos](./02-architecture-ecosystem.md)
+→ Siguiente: [04 — Blueprint MSN](./04-blueprint-msn.md)
+
+---
+
+*Documento vivo. Versión 0.2 — Sprint 0, Abril 2026*
+*Be In Cloud Group LLC — Ingeniería Cloud con Visión Financiera*

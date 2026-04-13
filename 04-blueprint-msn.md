@@ -1,4 +1,4 @@
-# 🪰 04 — Blueprint del Proyecto Piloto: Unidad de Transformación MSN
+# 🪰 04 — Blueprint del Proyecto Piloto: Unidad de Transformación MSN (Mosca Soldado Negro)
 
 > *"El Land estratégico. Atacar el problema más inmediato y visible."*
 
@@ -16,7 +16,7 @@ La Mosca Soldado Negro (Hermetia illucens) es la primera unidad productiva que s
 | **Pivote circular** | Conecta residuos municipales con proteína animal y fertilizante. Sin MSN, no hay economía circular. |
 | **Bajo riesgo** | Inversión inicial moderada, tecnología probada, mercado creciente. |
 | **Alta visibilidad** | Transforma un problema visible (basura municipal) en un producto de valor. |
-| **Demuestra el modelo** | Si MSN funciona orquestada por el backbone, el fondo ve el patrón para las demás unidades. |
+| **Demuestra el modelo** | Si MSN funciona orquestada por el backbone, el mismo patrón se replica en las demás unidades. |
 | **No tiene sistema** | Es la oportunidad perfecta para que BeInCloud demuestre SDD desde cero. |
 
 ### 1.2 MSN en el Contexto de Aldea Maya
@@ -200,49 +200,155 @@ sequenceDiagram
 
 ---
 
-## 4. Entregable en 4 Semanas: Alcance del Blueprint Técnico
+## 4. Plan de Ejecución: 8 Semanas con Dependencias Reales
 
-### 4.1 Semana 1-2: Especificación
+### 4.1 Gantt del Blueprint MSN (Mosca Soldado Negro)
 
-| Entregable | Descripción |
-|------------|-------------|
-| Spec de flujo de recolección | Desde alianza municipal hasta planta de separación |
-| Spec de ciclo larval | Control de naves, temperatura, humedad, tiempos |
-| Spec de producción | Rendimiento, calidad, distribución de productos |
-| Spec de integración con backbone | Eventos, contratos, SLAs |
-| Modelo de datos MSN | Entidades, relaciones, cadena de custodia |
+```mermaid
+gantt
+    title Blueprint MSN — Plan de 6 Semanas
+    dateFormat  YYYY-MM-DD
+    axisFormat  %d %b
 
-### 4.2 Semana 3: Validación
+    section 🔐 Fase 0: Acceso y Formalización
+    Grupo de trabajo + NDA              :f0a, 2026-04-13, 5d
+    Acceso a Drive y documentación      :f0b, after f0a, 2d
+    Sesión de inmersión con aliado MSN  :milestone, f0m, after f0b, 0d
 
-| Entregable | Descripción |
-|------------|-------------|
-| Revisión con aliado MSN | El líder especialista valida la lógica de negocio |
-| Revisión con Dirección Estratégica | Alineación con visión estratégica de Aldea Maya |
-| Revisión de auditoría | Verificar que cada dato es trazable para el fondo |
-| Ajustes a especificaciones | Incorporar feedback |
+    section 📜 Fase 1: Especificación (SDD)
+    Spec flujo de recolección           :f1a, after f0b, 4d
+    Spec ciclo larval y bioconversión   :f1b, after f0b, 4d
+    Spec producción y rendimiento       :f1c, after f1a, 3d
+    Spec integración con backbone       :f1d, after f1b, 3d
+    Modelo de datos audit-ready         :f1e, after f1c, 2d
 
-### 4.3 Semana 4: Blueprint Técnico
+    section ✅ Fase 2: Validación
+    Revisión con aliado MSN             :f2a, after f1e, 3d
+    Revisión con Dirección Estratégica  :f2b, after f2a, 2d
+    Incorporación de feedback           :f2c, after f2b, 3d
 
-| Entregable | Descripción |
-|------------|-------------|
-| Blueprint de sistema MSN | Arquitectura, componentes, tecnologías recomendadas |
-| Contratos de interfaz | APIs y eventos para integración con backbone |
-| Plan de implementación | Fases, tiempos, recursos, costos estimados |
-| Precotización detallada | Alineada con el proceso de Aldea Maya |
+    section 🏗️ Fase 3: Blueprint Técnico
+    Arquitectura sistema MSN + stack    :f3a, after f2c, 3d
+    Contratos de interfaz (APIs)        :f3b, after f3a, 3d
+    Precotización detallada             :f3c, after f3b, 2d
+    Presentación final a Aldea Maya     :milestone, f3m, after f3c, 0d
+```
 
-### 4.4 Criterios de Éxito del Blueprint
+### 4.2 Dependencias Críticas y Riesgos del Timeline
 
-- [ ] El aliado MSN puede leer la spec y confirmar que refleja su operación
-- [ ] El fondo puede leer el blueprint y entender el flujo de inversión
-- [ ] Cualquier despacho de TI puede tomar el blueprint e implementar
-- [ ] Los contratos de interfaz permiten integración futura con porcinos, agricultura, etc.
-- [ ] Las métricas de auditoría están definidas y son medibles
+| Dependencia | De quién depende | Riesgo si se retrasa | Mitigación |
+|-------------|:----------------:|:--------------------:|------------|
+| Firma de NDA | Legal de ambas partes | Bloquea acceso a información confidencial | Iniciar proceso legal en paralelo con grupo de trabajo |
+| Acceso al Drive | Aldea Maya | Sin documentación no se puede especificar | Solicitar acceso parcial mientras se formaliza NDA |
+| Sesión con aliado MSN (Mosca Soldado Negro) | Disponibilidad del líder especialista | Specs sin validación de campo | Agendar desde Semana 1 para asegurar slot |
+| Revisión de Dirección Estratégica | Disponibilidad de la dirección | Blueprint sin aprobación estratégica | Enviar specs para revisión asíncrona, sesión solo para dudas |
+
+> **Nota sobre el timeline**: Las 6 semanas contemplan 4 semanas de trabajo efectivo de BeInCloud + 2 semanas de buffer por dependencias de Aldea Maya (firmas, accesos, agendas). Si Aldea Maya se mueve rápido en la formalización, el blueprint puede estar listo antes.
+
+### 4.3 Gates de Aprobación
+
+El plan tiene tres gates donde se requiere aprobación explícita antes de avanzar:
+
+```mermaid
+flowchart LR
+    G0[🔐 Gate 0<br/>NDA firmado +<br/>Acceso a docs<br/>Sem 1] --> G1[📜 Gate 1<br/>Specs aprobadas<br/>por aliado MSN +<br/>Dirección<br/>Sem 4] --> G2[🏗️ Gate 2<br/>Blueprint +<br/>Precotización<br/>presentados<br/>Sem 6]
+
+    style G0 fill:#e74c3c,stroke:#c0392b,color:#fff
+    style G1 fill:#f39c12,stroke:#d68910,color:#fff
+    style G2 fill:#27ae60,stroke:#1e8449,color:#fff
+```
 
 ---
 
-## 5. Gobernanza y Transparencia del Piloto
+## 5. Stack Tecnológico Propuesto
 
-### 5.1 Reporte al Fondo — Piloto MSN
+Esta sección detalla las tecnologías recomendadas para el sistema MSN (Mosca Soldado Negro). Cada elección se justifica por su impacto en el negocio, no por preferencia técnica.
+
+### 5.1 Supuesto de Conectividad
+
+Se asume que Aldea Maya contará con conectividad a internet como parte de su infraestructura de ciudadela (energías limpias, agua tratada, vivienda — la conectividad es un servicio más). El stack se diseña **cloud-first**.
+
+> **Nota**: En caso de que la conectividad sea limitada o intermitente en fases tempranas de construcción, existen opciones de tolerancia a desconexión (cache local en dispositivos de captura, sincronización diferida) que se pueden incorporar sin cambiar la arquitectura base. Esto se evaluará durante el acompañamiento con Aldea Maya en las primeras semanas.
+
+### 5.2 Arquitectura del Sistema MSN — Cloud-First
+
+```mermaid
+graph TD
+    subgraph "Campo"
+        AV[🎙️ Asistente Virtual MSN<br/>App móvil / tablet<br/>Captura por voz<br/>Cache local para sync]
+        SENS[📡 Sensores<br/>Temperatura, humedad<br/>en naves de cría]
+    end
+
+    subgraph "Cloud — AWS (o GCP equivalente)"
+        APIGW[🔌 API Gateway<br/>AWS API Gateway]
+        LAMBDA[⚡ Funciones<br/>AWS Lambda / Go]
+        DB[🗄️ Base de Datos<br/>Amazon RDS PostgreSQL]
+        EVENTS[🔄 Bus de Eventos<br/>Amazon EventBridge]
+        STEPS[📋 Orquestación<br/>AWS Step Functions]
+        S3[📦 Almacenamiento<br/>Amazon S3]
+        ANALYTICS[📊 Analítica<br/>Amazon Athena + QuickSight]
+        IOT[📡 IoT Core<br/>AWS IoT Core]
+    end
+
+    subgraph "Observabilidad y FinOps"
+        OBS[📊 CloudWatch +<br/>AWS X-Ray]
+        FINOPS[💰 AWS Cost Explorer +<br/>Alertas de presupuesto]
+    end
+
+    AV --> APIGW
+    SENS --> IOT
+    IOT --> EVENTS
+    APIGW --> LAMBDA
+    LAMBDA --> DB
+    LAMBDA --> EVENTS
+    EVENTS --> STEPS
+    STEPS --> DB
+    STEPS --> S3
+    DB --> ANALYTICS
+    S3 --> ANALYTICS
+
+    LAMBDA --> OBS
+    STEPS --> OBS
+    ANALYTICS --> FINOPS
+
+    style EVENTS fill:#1a5276,stroke:#0e2f44,color:#fff
+    style STEPS fill:#1a5276,stroke:#0e2f44,color:#fff
+```
+
+### 5.3 Justificación de Cada Componente
+
+| Componente | Servicio AWS | Equivalente GCP | Por qué |
+|------------|-------------|-----------------|---------|
+| **API Gateway** | API Gateway | Cloud Endpoints | Punto de entrada único, autenticación, throttling — managed, sin servidores |
+| **Lógica de negocio** | Lambda (Go) | Cloud Functions | Serverless, paga solo por uso, Go es el foco de BeInCloud |
+| **Base de datos** | RDS PostgreSQL | Cloud SQL | Relacional managed, sin DBA, backups automáticos, escalable |
+| **Bus de eventos** | EventBridge | Pub/Sub | Desacopla servicios, enruta eventos entre dominios, managed |
+| **Orquestación** | Step Functions | Workflows | Sagas multi-paso (recolección → bioconversión → distribución), compensación automática |
+| **Almacenamiento** | S3 | Cloud Storage | Documentos, specs, respaldos, datos históricos — costo mínimo |
+| **Analítica / Reportes** | Athena + QuickSight | BigQuery + Looker | Consultas SQL sobre datos en S3, dashboards de auditoría — sin infraestructura |
+| **IoT (sensores)** | IoT Core | IoT Core | Ingesta de datos de sensores de naves de cría — managed, escalable |
+| **Observabilidad** | CloudWatch + X-Ray | Cloud Monitoring | Logs, métricas, traces — visibilidad total sin herramientas externas |
+| **FinOps** | Cost Explorer + Budgets | Billing + Budgets | Control de costos en tiempo real, alertas automáticas |
+
+### 5.4 Principios de Selección
+
+| Principio | Aplicación |
+|-----------|------------|
+| **Managed-first** | Cero servidores que mantener. Todo serverless o managed. Menos ops, más negocio. |
+| **Cloud-first** | Se asume conectividad. El cloud es el centro, no el edge. |
+| **FinOps nativo** | Cada servicio tiene costo predecible y medible. Alertas desde el día 0. |
+| **Serverless donde sea posible** | Lambda + Step Functions + EventBridge = paga solo lo que usas |
+| **Sin vendor lock-in en la lógica** | La lógica de negocio está en las specs (SDD), no en servicios propietarios. Migrar de AWS a GCP es cambiar infraestructura, no reescribir negocio. |
+
+> **Regla de negocio**: Ninguna tecnología se selecciona por tendencia o preferencia. Cada componente tiene una justificación de negocio. Si no la tiene, no entra.
+
+→ Ver detalle de capacidades técnicas de BeInCloud: [`assets/beincloud-profile.md`](./assets/beincloud-profile.md)
+
+---
+
+## 6. Gobernanza y Transparencia del Piloto
+
+### 6.1 Reporte al Fondo — Piloto MSN (Mosca Soldado Negro)
 
 El piloto MSN genera el primer reporte de auditoría real del backbone:
 
@@ -255,7 +361,7 @@ pie title "Distribución de Inversión — Piloto MSN"
     "Capacitación de aldeanos" : 10
 ```
 
-### 5.2 KPIs del Piloto para el Fondo
+### 6.2 KPIs del Piloto
 
 | KPI | Definición | Frecuencia |
 |-----|------------|:----------:|
@@ -266,9 +372,32 @@ pie title "Distribución de Inversión — Piloto MSN"
 | Trazabilidad | % de flujos con registro completo | Mensual |
 | Tiempo de reporte | Días entre cierre de mes y reporte listo | Mensual |
 
-> **Para el fondo**: El piloto MSN es la prueba de concepto del modelo completo. Si funciona aquí — con trazabilidad, auditoría y orquestación — funciona en las 20+ unidades restantes.
+> El piloto MSN (Mosca Soldado Negro) es la prueba de concepto del modelo completo. Si funciona aquí — con trazabilidad, auditoría y orquestación — el mismo patrón se aplica a las 20+ unidades restantes.
 
 ---
 
-*Documento vivo. Versión 0.1 — Sprint 0, Abril 2026*
-*BeInCloud — Arquitectos de Sistemas Nerviosos Territoriales*
+## 7. Criterios de Éxito del Blueprint
+
+- [ ] El aliado MSN puede leer la spec y confirmar que refleja su operación real
+- [ ] El blueprint permite entender el flujo de inversión sin conocimiento técnico
+- [ ] Cualquier despacho de TI puede tomar el blueprint e implementar sin depender de BeInCloud
+- [ ] Los contratos de interfaz (APIs) permiten integración futura con porcinos, agricultura, etc.
+- [ ] Las métricas de auditoría están definidas y son medibles desde el día 1
+- [ ] El stack tecnológico está justificado por negocio, no por preferencia técnica
+
+---
+
+## Navegación
+
+| Anterior | Siguiente |
+|:--------:|:---------:|
+| [← 03 — SDD + IA](./03-sdd-methodology.md) | [05 — Propuesta de Socio →](./05-roadmap-economics.md) |
+
+→ Para entender la sincronía biológica que MSN habilita: [`01-business-alignment.md`](./01-business-alignment.md)
+→ Para ver la arquitectura de datos donde MSN se integra: [`02-architecture-ecosystem.md`](./02-architecture-ecosystem.md)
+→ Para conocer a BeInCloud: [`assets/beincloud-profile.md`](./assets/beincloud-profile.md)
+
+---
+
+*Documento vivo. Versión 0.2 — Sprint 0, Abril 2026*
+*Be In Cloud Group LLC — Ingeniería Cloud con Visión Financiera*
